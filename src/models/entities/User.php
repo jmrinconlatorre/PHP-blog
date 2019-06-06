@@ -1,6 +1,6 @@
 <?php
 
-namespace App\moels\entities;
+namespace App\models\entities;
 
 use Doctrine\ORM\Mapping as ORM;//hace referencia como ORM para mapear
 use Symphony\Component\Validator\Constraints as Assert;
@@ -30,7 +30,7 @@ use Symphony\Component\Validator\Constraints as Assert;
       protected $name;
 
       /**
-       * @ORM\Column(type="string)
+       * @ORM\Column(type="string")
        * @Assert\NotBlank(
        *    message="Debes introducir el email"
        * )
@@ -42,7 +42,7 @@ use Symphony\Component\Validator\Constraints as Assert;
        protected $email;
 
        /**
-       * @ORM\Column(type="string)
+       * @ORM\Column(type="string")
        * @Assert\NotBlank(
        *    message="Debes introducir el password"
        * )

@@ -4,7 +4,7 @@ use App\ViewManager;
 use App\LogManager;
 use DI\Container;
 use App\DoctrineManager;
-
+use Kint;
 abstract class Controller
 {
 
