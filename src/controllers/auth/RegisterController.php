@@ -1,8 +1,10 @@
 <?php
+namespace App\controllers\auth;
 
-namespace App\controllers;
 use App\DoctrineManager;
 use App\models\entities\User;
+use App\controllers\Controller;
+
 use Kint;
 
 class RegisterController extends Controller{
@@ -10,7 +12,7 @@ class RegisterController extends Controller{
     public function index (/*DoctrineManager $doctrine*/){
        
 
-        $this->viewManager->renderTemplate("register.view.html");
+        $this->viewManager->renderTemplate('\auth\register.view.html');
     }
 
     public function register(DoctrineManager $doctrine){
