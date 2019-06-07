@@ -12,13 +12,13 @@ class DoctrineManager{
     private $container;
     public $em;
 
-    public function construct(Container $container){
+    public function __construct(Container $container){
         $this->container = $container;
-        $dbconfig= Config::getDB();
-        //Kint::dump($obj);
+        $dbconfig = Config::getDB();
+        Kint::dump($dbconfig);
         $paths=[
-            dirname(__DIR__).'/Models/Entities',
-            dirname(__DIR__).'/Models/Repositories'
+            dirname(__DIR__).'/models/entities',
+            dirname(__DIR__).'/models/repositories'
         ];
         $isDevMode=true;
         $config=Setup::createAnnotationMetadataConfiguration($paths,$isDevMode,null,null,false);

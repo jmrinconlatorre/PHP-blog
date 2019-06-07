@@ -1,8 +1,9 @@
 <?php
-namespace App\Config;
+namespace App\config;
 
 class Config{
-    public function getDB(){
-        return parse_ini_file(dirbase(__dir__).'/database.ini');
+
+    public static function getDB(){
+        return parse_ini_file(dirname(__DIR__).'/database.ini');
     }
 }

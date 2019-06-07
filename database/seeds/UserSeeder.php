@@ -22,7 +22,7 @@ class UserSeeder extends AbstractSeed
                 'name'=>$faker->name,
                 'email'=>$faker->name,
                 'password'=> sha1($faker->password),//tipo de encriptación sha1
-                'createdAt'=>date('Y-m-d H:i:s')
+                'created_at'=>date('Y-m-d H:i:s')
             ];
         }
         $this->insert('users',$data);

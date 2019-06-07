@@ -5,6 +5,7 @@ use App\LogManager;
 use DI\Container;
 use App\DoctrineManager;
 use Kint;
+
 abstract class Controller
 {
 
@@ -18,7 +19,14 @@ abstract class Controller
         $this->viewManager = $this->container->get(ViewManager::class);
         $this->logger = $this->container->get(LogManager::class);
         $this->logger->info("Clase ".get_class($this)." cargada");
+      
     }
 
-    public abstract function index(DoctrineManager $doctrine);
+    public abstract function index(/*DoctrineManager $doctrine*/);
+
+    public function redirectTo(string $page){
+        $host = $_SERVER['HTTP_HOST'];
+        $uri = rtrim(dirname($_SERVER['PHP_SELF'],'/\\'));
+        header("Location: http://$host$uri/$page");
+    }
 }
