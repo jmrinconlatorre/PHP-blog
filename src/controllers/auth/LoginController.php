@@ -27,7 +27,7 @@ class LoginController extends Controller{
         } 
 
         $this->sessionManager->put('user',$user->email);
-        $this->redirectTo('');
+        $this->redirectTo('dashboard');
     }
 
 }

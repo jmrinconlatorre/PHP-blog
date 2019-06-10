@@ -26,9 +26,10 @@ abstract class Controller
 
     public abstract function index(/*DoctrineManager $doctrine*/);
 
-    public function redirectTo(string $page){
-        $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(dirname($_SERVER['PHP_SELF'],'/\\'));
+        public function redirectTo(string $page)
+    {
+        $host= $_SERVER['HTTP_HOST'];
+        $uri= rtrim(dirname($_SERVER['PHP_SELF'],'/\\'));
         header("Location: http://$host$uri/$page");
     }
 }
